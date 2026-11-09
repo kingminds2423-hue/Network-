@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix হিসাব খাতা - আয়-ব্যয় ও স্টাফ ব্যবস্থাপনা",
+  "description": "দৈনিক আয়-ব্যয় হিসাব, ক্যাশ ইন হ্যান্ড ট্র্যাকিং, স্টাফ তালিকা ও পূর্ণাঙ্গ সিভি প্রিন্ট এবং এডমিন নিয়ন্ত্রণ প্যানেল।",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "entities": {
+    "CompanySettings": {
+      "title": "CompanySettings",
+      "description": "Business profile and company settings",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "maxLength": 200 },
+        "subTitle": { "type": "string", "maxLength": 300 },
+        "ownerName": { "type": "string", "maxLength": 100 },
+        "phone": { "type": "string", "maxLength": 30 },
+        "email": { "type": "string", "maxLength": 100 },
+        "address": { "type": "string", "maxLength": 300 },
+        "logoUrl": { "type": "string", "maxLength": 500 },
+        "currencySymbol": { "type": "string", "maxLength": 10 },
+        "partners": { "type": "array" },
+        "adminPin": { "type": "string", "maxLength": 20 },
+        "adminPhone": { "type": "string", "maxLength": 30 }
+      }
+    },
+    "Staff": {
+      "title": "Staff",
+      "description": "Employee and staff records",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "name": { "type": "string", "maxLength": 150 },
+        "fatherName": { "type": "string", "maxLength": 150 },
+        "motherName": { "type": "string", "maxLength": 150 },
+        "phone": { "type": "string", "maxLength": 30 },
+        "email": { "type": "string", "maxLength": 100 },
+        "nid": { "type": "string", "maxLength": 50 },
+        "address": { "type": "string", "maxLength": 300 },
+        "designation": { "type": "string", "maxLength": 100 },
+        "salary": { "type": "number" },
+        "joinedAt": { "type": "string", "maxLength": 30 },
+        "photoUrl": { "type": "string", "maxLength": 500 },
+        "pin": { "type": "string", "maxLength": 20 },
+        "role": { "type": "string", "maxLength": 30 },
+        "education": { "type": "string", "maxLength": 200 },
+        "experience": { "type": "string", "maxLength": 300 },
+        "emergencyContact": { "type": "string", "maxLength": 100 },
+        "bloodGroup": { "type": "string", "maxLength": 10 },
+        "status": { "type": "string", "maxLength": 20 }
+      },
+      "required": ["name", "phone", "pin"]
+    },
+    "Transaction": {
+      "title": "Transaction",
+      "description": "Income and expense transactions",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "type": { "type": "string", "enum": ["income", "expense"] },
+        "date": { "type": "string", "maxLength": 30 },
+        "title": { "type": "string", "maxLength": 250 },
+        "category": { "type": "string", "maxLength": 100 },
+        "amount": { "type": "number" },
+        "paymentMethod": { "type": "string", "maxLength": 30 },
+        "addedBy": { "type": "string", "maxLength": 100 },
+        "addedById": { "type": "string", "maxLength": 128 },
+        "note": { "type": "string", "maxLength": 500 },
+        "createdAt": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["type", "date", "title", "amount"]
+    },
+    "CustomerDue": {
+      "title": "CustomerDue",
+      "description": "Customer credit and due records (Due Khata)",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "customerName": { "type": "string", "maxLength": 150 },
+        "phone": { "type": "string", "maxLength": 30 },
+        "address": { "type": "string", "maxLength": 300 },
+        "totalDue": { "type": "number" },
+        "paidAmount": { "type": "number" },
+        "remainingDue": { "type": "number" },
+        "lastUpdated": { "type": "string", "maxLength": 30 },
+        "notes": { "type": "string", "maxLength": 500 },
+        "history": { "type": "array" }
+      },
+      "required": ["customerName", "phone"]
+    }
+  },
+  "firestore": {
+    "/settings/{settingId}": {
+      "schema": "CompanySettings",
+      "description": "Company settings and admin configuration"
+    },
+    "/staffs/{staffId}": {
+      "schema": "Staff",
+      "description": "Staff profile documents"
+    },
+    "/transactions/{transactionId}": {
+      "schema": "Transaction",
+      "description": "Daily income and expense transactions"
+    },
+    "/customerDues/{dueId}": {
+      "schema": "CustomerDue",
+      "description": "Customer due khata records"
+    }
+  }
+}

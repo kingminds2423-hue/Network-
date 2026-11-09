@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 450" width="100%" height="100%">
+  <defs>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="500" height="450" fill="#ffffff" rx="24"/>
+
+  <!-- Logo Graphic Mark (Centered around x=280, y=180) -->
+  <g id="logo-icon" filter="url(#soft-shadow)">
+    
+    <!-- Head Circle -->
+    <circle cx="288" cy="142" r="14" fill="#e3262a" />
+
+    <!-- Stylized Flying Person / V-Wings -->
+    <!-- The left wing curves up and left, the body dips to a central point, the right wing extends outwards to the upper right -->
+    <path d="M 235 152 
+             C 246 168, 258 190, 274 225 
+             C 294 195, 332 178, 360 170
+             C 334 186, 290 220, 273 242
+             C 268 230, 252 186, 226 156
+             C 230 154, 233 153, 235 152 Z" 
+          fill="#e3262a" />
+
+    <!-- Scattered Dynamic Dots to the left of the figure -->
+    <!-- Top row -->
+    <circle cx="242" cy="198" r="6.5" fill="#ca7873" />
+    <circle cx="218" cy="214" r="5" fill="#d9534f" />
+    <circle cx="230" cy="230" r="6" fill="#e3262a" />
+    <circle cx="248" cy="226" r="5" fill="#a93226" />
+    <circle cx="254" cy="242" r="6.5" fill="#e3262a" />
+
+    <!-- Middle cluster -->
+    <circle cx="202" cy="228" r="4.5" fill="#ba4a00" />
+    <circle cx="192" cy="236" r="3.5" fill="#d98880" />
+    <circle cx="216" cy="240" r="5.5" fill="#e3262a" />
+    <circle cx="232" cy="248" r="5" fill="#c0392b" />
+    <circle cx="246" cy="254" r="4.5" fill="#922b21" />
+
+    <!-- Left & lower scatter -->
+    <circle cx="184" cy="246" r="3" fill="#e6b0aa" />
+    <circle cx="204" cy="250" r="4" fill="#d9534f" />
+    <circle cx="220" cy="256" r="4.5" fill="#e3262a" />
+    <circle cx="198" cy="260" r="3.2" fill="#cd6155" />
+    <circle cx="178" cy="255" r="2.8" fill="#d98880" />
+    <circle cx="186" cy="266" r="3.2" fill="#c0392b" />
+  </g>
+
+  <!-- Brand Typography: "Dip Bhola network" -->
+  <text x="250" y="306" 
+        text-anchor="middle" 
+        fill="#e3262a" 
+        font-family="'Baloo Da 2', 'Hind Siliguri', 'Segoe UI', cursive, sans-serif" 
+        font-size="37" 
+        font-weight="900" 
+        letter-spacing="0.5px">
+    Dip Bhola network
+  </text>
+
+  <!-- Subtitle: "পরিচালক : জাহিদুল ইসলাম" -->
+  <text x="445" y="340" 
+        text-anchor="end" 
+        fill="#111827" 
+        font-family="'Hind Siliguri', 'Noto Sans Bengali', 'Segoe UI', system-ui, sans-serif" 
+        font-size="16" 
+        font-weight="700" 
+        letter-spacing="-0.2px">
+    পরিচালক : জাহিদুল ইসলাম
+  </text>
+</svg>

@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper function
+    function isValidId(id) {
+      return id is string && id.size() <= 128;
+    }
+
+    // Settings (company profile, admin configuration)
+    match /settings/{settingId} {
+      allow read, write: if true;
+    }
+
+    // Staffs collection
+    match /staffs/{staffId} {
+      allow read, write: if true;
+    }
+
+    // Transactions collection
+    match /transactions/{transactionId} {
+      allow read, write: if true;
+    }
+
+    // Customer Dues collection
+    match /customerDues/{dueId} {
+      allow read, write: if true;
+    }
+  }
+}
